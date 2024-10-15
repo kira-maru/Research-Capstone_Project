@@ -13,9 +13,9 @@ chrome_options.add_experimental_option("detach", True)
 
 class SheetMaker:
     """Automated sheet maker with google forms"""
-    def __init__(self):
+    def __init__(self, form_website):
         self.driver = webdriver.Chrome(options=chrome_options)
-        self.driver.get("https://forms.gle/1yr28xWaspAEPDng7")
+        self.driver.get(form_website)
         self.wait = WebDriverWait(self.driver, 10)
         self.rb = ResearchBrain()
 
